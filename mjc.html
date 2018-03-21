@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>TP PHP</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <ul class="nav nav-tabs">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="#">Bibliothèque</a></li>
+                <li><a href="intermittent.html">Intermittent</a></li>
+                <li class="active"><a href="mjc.html">MJC</a></li>
+            </ul>
+
+            <h1 class="text-primary">Utilitaire pour calculer le prix de votre inscription</h1>
+            <hr />
+            <form method="POST" action="php/CalculerMjc.php">
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="login">Login : </label>
+                        <input type="text" class="form-control" name="login" required>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="password">Password : </label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="Activite">Activités :</label>
+                        <select class="form-control" name="Activites">
+                            <option value="artistiques" >Artistiques</option>
+                            <option value="musicales" >Musicales</option>
+                            <option value="sportives" >Sportives</option>
+                            <option value="devperso" >Développement personnel</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="Annee">Date de naissance :</label>
+                        <input type="date" class="form-control" name="DateNaissance" required>
+                    </div>
+
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn center-block">Calcul du prix de l'inscription</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="reset" class="btn center-block">Rétablir</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

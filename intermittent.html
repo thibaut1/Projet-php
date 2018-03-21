@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>TP PHP</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li><a href="index.html">Index</a></li>
+                <li><a href="bibliotheque.html">Bibliothèque</a></li>
+                <li  class="active"><a href="#">Intermittent</a></li>
+                <li><a href="mjc.html">MJC</a></li>
+            </ul>
+
+            <h1 class="text-primary">Nous vous proposons de calculer votre cachet</h1>
+            <hr />
+            <form method="POST" action="php/CalculerCachet.php">
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="nbJourEngagt">Entrez le nombre de jours d'engagement : </label>
+                        <input type="number" class="form-control" name="nbJourEngagt" required>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="nbJourRepr">Entrez le nombre de jours de représentation : </label>
+                        <input type="number" class="form-control" name="nbJourRepr" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-6">
+                        Statut :
+                        <label class="radio-inline"><input type="radio" name="statut" value="technicien" checked>Technicien</label>
+                        <label class="radio-inline"><input type="radio" name="statut" value="comédien">Comédien</label>
+                        <label class="radio-inline"><input type="radio" name="statut" value="réalisateur">Réalisateur</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="Catégorie">Catégorie :</label>
+                        <select class="form-control" name="categ">
+                            <option value="1" >1ère Catégorie</option>
+                            <option value="2" >2ème Catégorie</option>
+                            <option value="3" >3ème Catégorie</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn center-block">Calcul du cachet</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+

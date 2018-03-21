@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>TP PHP</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <ul class="nav nav-tabs">
+                <li><a href="index.html">Index</a></li>
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bibliothèque</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown"><a href="http://localhost:8081/TP_MJC/bibliotheque.html#">user</a></li>
+                        <li class="dropdown"><a href="#">admin</a></li>
+                    </ul>
+                    </li>
+                <li><a href="intermittent.html">Intermittent</a></li>
+                <li><a href="mjc.html">MJC</a></li>
+            </ul>
+
+            <h1 class="text-primary">Utilitaire pour calculer le prix de votre cotisation</h1>
+            <hr />
+            <form method="POST" action="php/CalculerAdhesionAdmin.php">
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="text">Login :</label>
+                        <input type="text" class="form-control" name="unLogin" placeholder="Entrer votre login" required>
+                    </div>
+                    <div class="form-group col-xs-12 col-sm-6">
+                        <label for="text">Password :</label>
+                        <input type="password" class="form-control" name="unPassword" placeholder="Entrer votre password" required>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn center-block">Affichage des adhérants</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="reset" class="btn center-block">Rétablir</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>
